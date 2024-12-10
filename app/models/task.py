@@ -1,5 +1,6 @@
 from .base_model import BaseModel, Base
 from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy import String, ForeignKey
 
 
 class Task(BaseModel, Base):

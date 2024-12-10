@@ -1,7 +1,8 @@
-'''Task folder model'''
+'''Task list model Definition'''
 from .base_model import Base, BaseModel
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import ForeignKey, String
+from uuid import uuid4
 
 
 class TaskList(BaseModel, Base):
