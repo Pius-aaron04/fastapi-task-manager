@@ -11,8 +11,8 @@ class Task(BaseModel, Base):
 
     description: Mapped[str] = mapped_column(String)
     status: Mapped[str] = mapped_column(String(35))
-    parent_id: Mapped[str] = mapped_column(ForeignKey('task_folders.id'))
-    parent: Mapped["TaskFolder"] = relationship("TaskFolder", backref="tasks")
+    parent_id: Mapped[str] = mapped_column(ForeignKey('task_lists.id'))
+    parent: Mapped["TaskList"] = relationship("TaskList", backref="tasks")
 
     def __repr__(self):
         return f"Task(id={self.id!r}, description={self.description!r}, status={self.status}, parent_id={self.parent_id})"

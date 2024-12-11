@@ -9,7 +9,7 @@ class TaskList(BaseModel, Base):
     """ Task Folder model for db interaction
     """
 
-    __tablename__ = 'task_list'
+    __tablename__ = 'task_lists'
 
     id: Mapped[str] = mapped_column(primary_key=True, default=str(uuid4()))
     user_id: Mapped[str] = mapped_column(ForeignKey('users.id'))

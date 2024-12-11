@@ -10,6 +10,6 @@ class User(BaseModel, Base):
     username: Mapped[str] = mapped_column(String(35), unique=True, nullable=False)
     email: Mapped[str] = mapped_column(String(50))
     password: Mapped[str] = mapped_column(String())
-    task_folders: Mapped[list['TaskFolder']] = relationship(back_populates='user',
+    task_lists: Mapped[list['TaskList']] = relationship(back_populates='user',
                                                cascade='all, delete-orphan',
                                                )
